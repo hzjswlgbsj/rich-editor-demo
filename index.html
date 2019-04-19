@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rich editor</title>
+	<style>
+		.editor-container {
+			height: 400px;
+			width: 60%;
+			margin-left: 20%;
+			margin-top: 50px;
+			border: 1px solid #cccccc;
+			font-size: 16px;
+		}
+		.editor-operation {
+			width: 60%;
+			margin-left: 20%;
+		}
+		.button-style span{
+			background-color: #cccccc;
+			cursor: pointer;
+			border-radius: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+	<body>
+		<div class="editor-container" contenteditable="true" id="editor">
+			<p contenteditable="false">不能被编辑</p>
+			<span id="text">可以被编辑</span>
+		</div>
+		<div class="editor-operation">
+			<button id="changeEditStatus">改变编辑状态</button>
+			<button id="consoleRange">打印当前Range</button>
+			<button id="consoleSelection">打印当前Selection</button>
+			<button id="consoleText">打印"可以被编辑"文本节点对象</button>
+			<div class="buttons button-style"></div>
+		</div>
+	</body>
+
+<script src="index.js"></script>
+<script src="Range.js"></script>
+<script src="command.js"></script>
+</html>
